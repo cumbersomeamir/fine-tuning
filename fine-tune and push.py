@@ -39,9 +39,7 @@ training_args = TrainingArguments(
     per_device_train_batch_size=4,
     save_total_limit=1,
     logging_steps=100,
-    evaluation_strategy="no",  # Change this line
-    load_best_model_at_end=True,
-    metric_for_best_model="loss",
+    evaluation_strategy="no",
 )
 
 
