@@ -62,5 +62,5 @@ model = GPTNeoForCausalLM.from_pretrained('fine_tuned_gpt_neo_1.3B')
 
 
 #Saving the Model on huggingface
-    token = "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"
-    model.push_to_hub("Amirkid/juice-gptneo1.3B", use_auth_token=token)
+token = "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"
+model.push_to_hub("Amirkid/juice-gptneo1.3B", use_auth_token=token)
