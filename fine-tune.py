@@ -7,7 +7,7 @@ from transformers import GPTNeoForCausalLM, GPT2Tokenizer, TrainingArguments, Tr
 
 
 #Reading the file
-data = pd.read_excel("/content/drive/My Drive/Juice Wrld small dataset.xlsx")
+data = pd.read_excel("Juice Wrld small dataset.xlsx")
 
 # Convert the pandas DataFrame to Hugging Face's Dataset
 hf_dataset = Dataset.from_pandas(data)
