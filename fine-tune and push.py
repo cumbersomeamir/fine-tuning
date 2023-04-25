@@ -7,7 +7,7 @@ from transformers import GPTNeoForCausalLM, GPT2Tokenizer, TrainingArguments, Tr
 
 
 #Reading the file
-data = pd.read_excel("Juice Wrld small dataset.xlsx")
+data = pd.read_excel("Juice Wrld dataset.xlsx")
 
 # Convert the pandas DataFrame to Hugging Face's Dataset
 hf_dataset = Dataset.from_pandas(data)
@@ -63,4 +63,4 @@ model = GPTNeoForCausalLM.from_pretrained('fine_tuned_gpt_neo_1.3B')
 
 #Saving the Model on huggingface
 token = "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"
-model.push_to_hub("Amirkid/juice-gptneo1.3B", use_auth_token=token)
+model.push_to_hub("Amirkid/juicewrld-gptneo1.3B", use_auth_token=token)
