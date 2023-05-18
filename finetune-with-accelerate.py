@@ -79,7 +79,7 @@ for epoch in range(num_epochs):
           outputs = model(**batch)
           loss = outputs.loss
           
-         accelerator.backward(loss)
+          accelerator.backward(loss)
 
           optimizer.step()
           lr_scheduler.step()
