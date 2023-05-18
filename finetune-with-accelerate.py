@@ -45,7 +45,7 @@ optimizer = AdamW(model.parameters(), lr=3e-5)
 
 
 num_epochs = 3
-num_training_steps = num_epochs * len(train_dataloader)
+num_training_steps = num_epochs * len(tokenized_dataset)
 lr_scheduler = get_scheduler(
       "linear",
       optimizer=optimizer,
@@ -77,7 +77,7 @@ trainer = Trainer(
 model.train()
 
 for epoch in range(num_epochs):
-      for batch in train_dataloader:
+      for batch in tokenized_dataset:
         
           outputs = model(**batch)
           loss = outputs.loss
