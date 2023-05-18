@@ -4,7 +4,7 @@
 import pandas as pd
 from datasets import Dataset
 from transformers import GPTNeoForCausalLM, GPT2Tokenizer, TrainingArguments, Trainer
-from accelerator import Accelerator
+from accelerate import Accelerator
 
 
 
