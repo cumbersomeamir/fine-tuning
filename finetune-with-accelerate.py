@@ -33,6 +33,9 @@ def tokenize_function(examples):
 tokenized_dataset = hf_dataset.map(tokenize_function, batched=True)
 print(tokenized_dataset)
 
+#Removing the string columns 
+column_names = ["prompt", "completion"]
+tokenized_datasets = tokenized_datasets.remove_columns(dataset_dict["train"].column_names)
 
 
 # Load the pre-trained GPT-Neo 1.3B model
