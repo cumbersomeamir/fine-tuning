@@ -1,4 +1,4 @@
-#pip3 install transformers pandas openpyxl datasets
+#pip3 install transformers pandas openpyxl datasets accelerate
 
 #Importing the relevant libararies
 import pandas as pd
