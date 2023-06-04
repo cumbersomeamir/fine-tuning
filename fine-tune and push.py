@@ -1,4 +1,4 @@
-#pip3 install transformers pandas openpyxl datasets
+#pip3 install transformers pandas openpyxl datasets accelerate
 
 #Importing the relevant libararies
 import pandas as pd
@@ -35,7 +35,7 @@ model = GPTNeoForCausalLM.from_pretrained('EleutherAI/gpt-neo-1.3B')
 # Define the training arguments
 training_args = TrainingArguments(
     output_dir='output',
-    num_train_epochs=3,
+    num_train_epochs=0.1,
     per_device_train_batch_size=4,
     save_total_limit=1,
     logging_steps=100,
