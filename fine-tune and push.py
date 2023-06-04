@@ -56,9 +56,9 @@ trainer.train()
 # Save the fine-tuned model
 trainer.save_model('fine_tuned_gpt_neo_1.3B')
 
-model = GPTNeoForCausalLM.from_pretrained('fine_tuned_gpt_neo_1.3B')
+#model = GPTNeoForCausalLM.from_pretrained('fine_tuned_gpt_neo_1.3B')
 
 
 #Saving the Model on huggingface
 token = "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"
-model.push_to_hub("Amirkid/juicewrld-gptneo1.3B", use_auth_token=token)
+trainer.push_to_hub("Amirkid/juicewrld-gptneo1.3B", use_auth_token=token)
